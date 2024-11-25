@@ -1,0 +1,10 @@
+apiVersion: dapr.io/v1alpha1
+kind: Configuration
+metadata:
+  name: page-view
+  namespace: default
+spec:
+  http:
+    port: 5002 # Port that your page-view service listens on (adjust if needed)
+  appProtocol: http # This can be "http" or "grpc" depending on your setup
+  apiVersion: dapr.io/v1alpha1

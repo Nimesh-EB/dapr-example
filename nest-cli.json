@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/dapr-demo-api/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/dapr-demo-api/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/dapr-demo-api",
+  "projects": {
+    "dapr-demo-api": {
+      "type": "application",
+      "root": "apps/dapr-demo-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/dapr-demo-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/dapr-demo-api/tsconfig.app.json"
+      }
+    },
+    "page-view": {
+      "type": "application",
+      "root": "apps/page-view",
+      "entryFile": "main",
+      "sourceRoot": "apps/page-view/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/page-view/tsconfig.app.json"
+      }
+    }
+  }
+}
